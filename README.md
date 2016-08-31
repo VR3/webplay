@@ -1,9 +1,7 @@
-# README
+# Webplay.tv
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Webplay.tv | Punto de partida para el sistema de video por internet. Web app (React + Ruby on Rails)
 
-Things you may want to cover:
 
 * Ruby version
 
