@@ -10,22 +10,44 @@
 
   <body>
 
+  	<!-- Desktop Mobile Profile -->
+		<ul id="dropdown-desktop" class="dropdown-content">
+		  <li><a href="#!">Mi Perfil</a></li>
+		  <li><a href="#!">Mis Videos</a></li>
+		  <li><a href="#!">Herramientas</a></li>
+		  <li><a href="#!">Reportes</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">Salir</a></li>
+		</ul>
+
+		<!-- Mobile Profile Menu -->
+		<ul id="dropdown-mobile" class="dropdown-content">
+		  <li><a href="#!">Mi Perfil</a></li>
+		  <li><a href="#!">Mis Videos</a></li>
+		  <li><a href="#!">Herramientas</a></li>
+		  <li><a href="#!">Reportes</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">Salir</a></li>
+		</ul>
+
 	  <header>
-	  	<nav>
+	  	<nav class="blue lighten-2 z-depth-1">
 		    <div class="nav-wrapper">
-		      <a href="#!" class="brand-logo">Logo</a>
-		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <a href="#!" class="brand-logo">Webplay.TV</a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">|||</i></a>
 		      <ul class="right hide-on-med-and-down">
-		        <li><a href="sass.html">Sass</a></li>
-		        <li><a href="badges.html">Components</a></li>
-		        <li><a href="collapsible.html">Javascript</a></li>
-		        <li><a href="mobile.html">Mobile</a></li>
+		        <li><a href="sass.html">Soluciones</a></li>
+		        <li><a href="badges.html">Productos</a></li>
+		        <li><a href="collapsible.html">Clientes</a></li>
+		        <li><a href="mobile.html">Compañia</a></li>
+		        <li><a class="dropdown-button" href="#!" data-activates="dropdown-desktop">Oscar Chavez<i class="material-icons right"></i></a></li>
 		      </ul>
 		      <ul class="side-nav" id="mobile-demo">
-		        <li><a href="sass.html">Sass</a></li>
-		        <li><a href="badges.html">Components</a></li>
-		        <li><a href="collapsible.html">Javascript</a></li>
-		        <li><a href="mobile.html">Mobile</a></li>
+		        <li><a href="sass.html">Soluciones</a></li>
+		        <li><a href="badges.html">Productos</a></li>
+		        <li><a href="collapsible.html">Clientes</a></li>
+		        <li><a href="mobile.html">Compañia</a></li>
+		        <li><a class="dropdown-button" href="#!" data-activates="dropdown-mobile">Oscar Chavez<i class="material-icons right"></i></a></li>
 		      </ul>
 		    </div>
 		  </nav>
@@ -35,12 +57,12 @@
 	   <%= yield %>
 	  </main>
 
-	  <footer class="page-footer">
+	  <footer  class="blue lighten-2 z-depth-1">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col l6 s12">
-	          <h5 class="white-text">Footer Content</h5>
-	          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+	          <h5 class="white-text">Webplay.tv</h5>
+	          <p class="grey-text text-lighten-4">Convierte tu audiencia en tus clientes.</p>
 	        </div>
 	        <div class="col l4 offset-l2 s12">
 	          <h5 class="white-text">Links</h5>
@@ -55,8 +77,8 @@
 	    </div>
 	    <div class="footer-copyright">
 	      <div class="container">
-	      © 2014 Copyright Text
-	      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+	      © 2016 VR3 Technologies &copy;
+	      <%= link_to "Quienes Somos", pages_about_path, :class => "grey-text text-lighten-4 right" %>
 	      </div>
 	    </div>
 	  </footer>
@@ -65,6 +87,7 @@
 
 	 <script>
 	  	$(".button-collapse").sideNav();
+	  	$(".dropdown-button").dropdown();
 	 </script>
 
 </html>
