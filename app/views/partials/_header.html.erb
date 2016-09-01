@@ -1,0 +1,56 @@
+<header>
+	
+	<!-- Desktop Mobile Profile -->
+	<ul id="dropdown-desktop" class="dropdown-content">
+	  <li><a href="#!"><i class="material-icons right">perm_identity</i> Mi Perfil</a></li>
+	  <li><a href="#!"><i class="material-icons right">video_library</i> Panel de Control</a></li>
+	  <li><a href="#!"><i class="material-icons right">payment</i> Pagos</a></li>
+	  <li><a href="#!"><i class="material-icons right">settings</i> Configuracion</a></li>
+	  <li><a href="#!"><i class="material-icons right">trending_up</i> Reportes</a></li>
+	  <li class="divider"></li>
+	  <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+	</ul>
+
+	<!-- Mobile Profile Menu -->
+	<ul id="dropdown-mobile" class="dropdown-content">
+	  <li><a href="#!"><i class="material-icons right">perm_identity</i> Mi Perfil</a></li>
+	  <li><a href="#!"><i class="material-icons right">video_library</i> Panel de Control</a></li>
+	  <li><a href="#!"><i class="material-icons right">payment</i> Pagos</a></li>
+	  <li><a href="#!"><i class="material-icons right">settings</i> Configuracion</a></li>
+	  <li><a href="#!"><i class="material-icons right">trending_up</i> Reportes</a></li>
+	  <li class="divider"></li>
+	  <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+	</ul>
+
+	<!--Main Nav Bar-->
+	<nav class="blue lighten-2 z-depth-1">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Webplay.TV</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Soluciones</a></li>
+        <li><a href="badges.html">Productos</a></li>
+        <li><a href="collapsible.html">Clientes</a></li>
+        <li><a href="mobile.html">Compañia</a></li>
+        <% if(!user_signed_in?) %>
+        <li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
+        <li><%= link_to "Registrarse", new_user_registration_path %></li>
+        <% else %>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown-desktop"><%= current_user.email %></a></li>
+        <% end %>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Soluciones</a></li>
+        <li><a href="badges.html">Productos</a></li>
+        <li><a href="collapsible.html">Clientes</a></li>
+        <li><a href="mobile.html">Compañia</a></li>
+        <% if(!user_signed_in?) %>
+        <li><%=	 link_to "Iniciar Sesión", new_user_session_path %></li>
+        <li><%= link_to "Registrarse", new_user_registration_path %></li>
+        <% else %>
+        <li><a class="dropdown-button" href="#" data-activates="dropdown-mobile"><%= current_user.email %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
