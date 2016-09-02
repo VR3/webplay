@@ -20,4 +20,8 @@
 
   <button class="btn waves-effect waves-light" type="submit" name="action">Iniciar Sesión</button>
   <%= link_to "Olvidé mi contraseña", new_user_password_path, :class => "btn waves-effect waves-light" %>
+
+  <hr>
+
+  <%= link_to "Iniciar Sesión con Facebook", user_facebook_omniauth_authorize_path, class: "btn blue darken-1" %>
 <% end %>

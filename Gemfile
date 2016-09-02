@@ -21,6 +21,11 @@ gem 'materialize-sass'
 gem 'devise'
 #Toastr
 gem 'toastr-rails'
+#Mandrill
+gem 'mandrill-api', '1.0.52', require: 'mandrill'
+#Omniauth
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
