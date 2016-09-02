@@ -29,6 +29,9 @@ gem 'omniauth-facebook'
 #ActiveAdmin
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'active_skin'
+#Paperclip
+gem 'paperclip', '~> 5.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
