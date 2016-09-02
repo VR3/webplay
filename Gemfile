@@ -32,7 +32,10 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'active_skin'
 #Paperclip
 gem 'paperclip', '~> 5.1'
-
+#RedCarpet
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+#CodeRay
+gem 'coderay', '~> 1.1', '>= 1.1.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
