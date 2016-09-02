@@ -1,7 +1,14 @@
-class Project < ApplicationRecord
+class Project < ActiveRecord::Base
 	#t.string :name
   #t.text :content
   #t.integer :price
+  
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
+  def should_generate_new_friendly_id?
+		title_changed?
+	end
 
 	has_many :tasks
 

@@ -30,4 +30,10 @@ ActiveAdmin.register_page "Dashboard" do
     #   end
     # end
   end # content
+
+  controller do
+      def find_resource
+        scoped_collection.friendly.find(params[:id])
+      end
+    end
 end

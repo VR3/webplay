@@ -17,25 +17,29 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 # MaterializeCSS
 gem 'materialize-sass'
-# Devise for Authentification
+# Devise for Authentification and User Handling
 gem 'devise'
-#Toastr
+#Toastr for Making Alerts User Friendly and Timed
 gem 'toastr-rails'
-#Mandrill
+#Mandrill for Transactional Emails
 gem 'mandrill-api', '1.0.52', require: 'mandrill'
-#Omniauth
+#Omniauth - For Authentification using external providers
 gem 'omniauth'
 gem 'omniauth-facebook'
-#ActiveAdmin
+#ActiveAdmin for a real backend using ActiveRecord
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'active_skin'
-#Paperclip
+#Paperclip for Attaching Images, uses ImageMagick
 gem 'paperclip', '~> 5.1'
-#RedCarpet
+#RedCarpet for Markdown Support
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
-#CodeRay
+#CodeRay for Code Syntax Highlighting
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+#Friendly_id for slugging and permalinks support
+gem 'friendly_id', '~> 5.1'
+# Active Admin Sortable Tree for hierarchies and sorting lists
+gem 'active_admin-sortable_tree', '~> 0.2.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
