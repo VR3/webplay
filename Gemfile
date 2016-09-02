@@ -26,6 +26,9 @@ gem 'mandrill-api', '1.0.52', require: 'mandrill'
 #Omniauth
 gem 'omniauth'
 gem 'omniauth-facebook'
+#ActiveAdmin
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
