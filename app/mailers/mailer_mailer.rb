@@ -9,7 +9,7 @@ class MailerMailer < ActionMailer::Base
 		template_content = []
 		message = {
 			to: [{email: "#{user.email}"}],
-			subject: "Bienvenido a VR3",
+			subject: "Bienvenido a Webplay",
 			merge_vars: [
 				{
 					rcpt: user.email,
