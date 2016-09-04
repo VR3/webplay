@@ -5,7 +5,7 @@ ActiveAdmin.register Task do
 						sorting_attribute: :tag
 	index :as => :sortable do
 		label :title
-
+		
 		actions
 	end
 

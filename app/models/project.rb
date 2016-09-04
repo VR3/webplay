@@ -6,10 +6,6 @@ class Project < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  def should_generate_new_friendly_id?
-		title_changed?
-	end
-
 	has_many :tasks
 
 	validates :name, presence: true, length: { maximum: 50 }
@@ -18,5 +14,13 @@ class Project < ActiveRecord::Base
 
 	has_attached_file :image, styles: { medium: "680x300>", thumb: "170x75>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  def should_generate_new_friendly_id?
+		title_changed?
+	end
+
+	def shortname
+		name.length > 25? name[0..25] + "..." : name
+	end
 
 end
