@@ -3,6 +3,7 @@ ActiveAdmin.register Task do
 
 	sortable tree: false,
 						sorting_attribute: :tag
+						
 	index :as => :sortable do
 		label :title
 		
@@ -23,6 +24,18 @@ ActiveAdmin.register Task do
 	  def find_resource
 	    scoped_collection.friendly.find(params[:id])
 	  end
+	end
+
+	form do |f|
+		f.inputs do
+			input :project, label: "Proyecto"
+			input :title, label: "Titulo"
+			input :note, label: "Nota"
+			input :video, label: "Video"
+			input :header, label: "Encabezado"
+		end
+
+		actions
 	end
 
 end
